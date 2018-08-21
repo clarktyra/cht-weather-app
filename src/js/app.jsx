@@ -1,9 +1,11 @@
 import React from 'react';
-import City from './components/city/city';
-import History from './components/history/history';
-import Navbar from './components/navbar/navbar';
+import City from './components/city';
+import History from './components/history';
+import Navbar from './components/navbar';
 
 export default class App extends React.Component {
+ 
+
   render() {
     return (
       <div className='container'>
@@ -13,7 +15,6 @@ export default class App extends React.Component {
         </div>
         <Navbar />
         <br />
-        
         <br />
         <div className='container'>
           <div className='row'>
