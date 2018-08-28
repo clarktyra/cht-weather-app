@@ -32,28 +32,29 @@ export default class Navbar extends React.Component {
         return (
             <div className = 'col-md-12'>
                 <div className="row btn-group">
-                        <button onClick={() => this.handleCityInformation("San Diego")} >San Diego</button>
-                        <button onClick={() => this.handleCityInformation("Portland")} >Portland</button>
-                        <button onClick={() => this.handleCityInformation("Tucson")} >Tucson</button>
-                        <button onClick={() => this.handleCityInformation("Denver")} >Denver</button>
-                        <button onClick={() => this.handleCityInformation("Asheville")} >Asheville</button>
-                        <button onClick={() => this.handleCityInformation("Baltimore")} >Baltimore</button>
-                </div>
-                <div className="row" >
-                    <input 
-                    className="search " 
-                    type="text" 
-                    value={this.props.city} 
-                    placeholder="Search" 
-                    onChange={this.handleCityInput}>
-                    </input>
-
-                    <button 
-                    className="btn" 
+                        <button className="btn btn-light" onClick={() => this.handleCityInformation("San Diego")} >San Diego</button>
+                        <button className="btn btn-light" onClick={() => this.handleCityInformation("Portland")} >Portland</button>
+                        <button className="btn btn-light" onClick={() => this.handleCityInformation("Tucson")} >Tucson</button>
+                        <button className="btn btn-light" onClick={() => this.handleCityInformation("Denver")} >Denver</button>
+                        <button className="btn btn-light" onClick={() => this.handleCityInformation("Asheville")} >Asheville</button>
+                        <button className="btn btn-light" onClick={() => this.handleCityInformation("Baltimore")} >Baltimore</button>
+                        <button 
+                    className="btn btn-info" 
                     type="button submit" 
                     onClick={this.handleInformation}>
                     Search
                     </button>
+                </div>
+                <div className="row" id="searchBox">
+                    <input 
+                    className="search col-md-11" 
+                    type="text" 
+                    value={this.props.city} 
+                    placeholder="search a city" 
+                    onChange={this.handleCityInput}>
+                    </input>
+
+                   
                 </div>
             </div>
         );

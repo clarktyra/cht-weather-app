@@ -9,45 +9,27 @@ export default class City extends React.Component {
         if (!weatherData) {
             return (
             <div className='col-12 col-md-6 mb-4'>
-                <div className='card border-primary mb-3'>
-                    <div className='card-header text-primary alert-primary'>City Info </div>
+                <div className='card border-success mb-3'>
+                    <div className='card-header text-success alert-success'>City Info </div>
                     <div className='card-body'>
-                        <div className='container'>
-                            <div className='row'>
+                    <div className='container'>
+                            <div className='row '>
                                 <p>CITY NAME:</p>
                             </div>
-                            <div className='row'>
-                                <p>LAT:</p>
-                                <p>LON:</p>
+                            <div className='row '>
+                                <p>LAT/LON:</p>
                             </div>
                             <hr />
                             <div className='row'>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Temperature</h6>
-                                    <p></p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Pressure</h6>
-                                    <p></p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Humidity</h6>
-                                    <p></p>
-                                </div>
+                                <div className='col-lg-4 text-center'>Temperature:</div>
+                                <div className='col-lg-4 text-center'>Pressure: </div>
+                                <div className='col-lg-4 text-center'>Humidity: </div>
+                            
                             </div>
                             <div className='row'>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Lowest Temp</h6>
-                                    <p></p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Highest Temp</h6>
-                                    <p></p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Wind Speed</h6>
-                                    <p></p>
-                                </div>
+                                <div className='col-lg-4 text-center'>Lowest Temp:</div>
+                                <div className='col-lg-4 text-center'>Highest Temp:</div>
+                                <div className='col-lg-4 text-center'>Wind Speed:</div>
                             </div>
                         </div>
                     </div>
@@ -59,44 +41,26 @@ export default class City extends React.Component {
         return (
             <div className='col-12 col-md-6 mb-4'>
                 <div className='card border-primary mb-3'>
-                    <div className='card-header text-primary alert-primary'>City Info </div>
+                    <div className='card-header text-success alert-success'>City Info </div>
                     <div className='card-body'>
                         <div className='container'>
-                            <div className='row alert-primary'>
+                            <div className='row '>
                                 <p>CITY NAME:{weatherData.name}</p>
                             </div>
-                            <div className='row alert-primary'>
-                                <p>LAT:{weatherData.coord.lat}</p>
-                                <p>LON:{weatherData.coord.lon}</p>
+                            <div className='row '>
+                                <p>LAT/LON:{weatherData.coord.lat}, {weatherData.coord.lon}</p>
                             </div>
                             <hr />
                             <div className='row'>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Temperature</h6>
-                                    <p>{weatherData.main.temp}</p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Pressure</h6>
-                                    <p>{weatherData.main.pressure}</p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Humidity</h6>
-                                    <p>{weatherData.main.humidity}</p>
-                                </div>
+                                <div className='col-lg-4 text-center alert-primary'>Temperature:{weatherData.main.temp}</div>
+                                <div className='col-lg-4 text-center'>Pressure: {weatherData.main.pressure}</div>
+                                <div className='col-lg-4 text-center'>Humidity: {weatherData.main.humidity}</div>
+                            
                             </div>
                             <div className='row'>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Lowest Temp</h6>
-                                    <p>{weatherData.main.temp_min}</p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Highest Temp</h6>
-                                    <p>{weatherData.main.temp_max}</p>
-                                </div>
-                                <div className='col-4 text-center'>
-                                    <h6 className='h6 strong'>Wind Speed</h6>
-                                    <p>{weatherData.wind.speed}</p>
-                                </div>
+                                <div className='col-lg-4 text-center alert-success'>Lowest Temp:{weatherData.main.temp_min}</div>
+                                <div className='col-lg-4 text-center alert-success'>Highest Temp:{weatherData.main.temp_max}</div>
+                                <div className='col-lg-4 text-center'>Wind Speed:{weatherData.wind.speed}</div>
                             </div>
                         </div>
                     </div>

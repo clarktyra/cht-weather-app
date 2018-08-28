@@ -35,16 +35,17 @@ export default class History extends React.Component {
                 //     </div>
                 // </div>
                 <div className='col-12 col-md-6 mb-8'>
-                    <div className='card border-primary'>
-                        <div className='card-header text-primary alert-primary'> Search History </div>
+                    <div className='card border-success'>
+                        <div className='card-header text-success alert-success'> Search History </div>
                         <div className='card-body'>
-                            <table>
+                            <table className="table table-striped">
                                 <tbody>
                                 {history.map(item => (
                                         <tr key={item.date + item.time}>
                                             <td>{item.name}</td>
                                             <td><span></span></td>
                                             <td className='text-right'><p className='mb-0'><small>{item.date},<br />{item.time}</small></p></td>
+                                            <hr/>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -55,8 +56,8 @@ export default class History extends React.Component {
             );
         } else {
             <div className='col-12 col-md-6 mb-8'>
-            <div className='card border-primary'>
-                <div className='card-header text-primary alert-primary'> Search History </div>
+            <div className='card border-success'>
+                <div className='card-header text-success alert-success'> Search History </div>
                 <div className='card-body'>
                     <table>
                         <tbody>
